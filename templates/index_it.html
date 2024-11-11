@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Query Prediction for IT Support</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+            font-size: 2rem;
+        }
+        form {
+            margin-top: 1rem;
+        }
+        input[type="text"] {
+            padding: 1rem;
+            width: 100%;
+            font-size: 1.5rem;  /* Make the query text bigger */
+            text-align: center; /* Align the text in the input field */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            box-sizing: border-box; /* Ensure padding is inside the width */
+        }
+        button {
+            margin-top: 1rem;
+            padding: 0.5rem 2rem;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .response {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            color: #444;
+            text-align: left;  
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your Query for IT Support</h1>
+        <form action="/predict_it" method="POST">
+            <input type="text" id="query" name="query" required>
+            <button type="submit">Submit to IT Support Model</button>
+        </form>
+
+        {% if response %}
+            <div class="response">
+                <strong>Your Query:</strong> "{{ request.form['query'] }}" <br><br>
+                <strong>Query is Transferred to {{ response }}</strong>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
