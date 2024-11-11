@@ -6,43 +6,107 @@
     <title>Redirect on Button Click</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f4f4f9;
+            background: linear-gradient(to right, #009C4B, #48C9B0); /* Gradient background */
+            position: relative;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #007bff;
+            z-index: 10;
+        }
+        .header img {
+            height: 50px; /* Adjusted the logo height */
+            margin-right: 15px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            color: #d8050f; /* Solar Green */
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+            font-weight: bold;
+        }
+        .subheader {
+            font-size: 1.5rem;
+            color: #151313;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: normal;
         }
         .container {
             text-align: center;
-            padding: 2rem;
+            padding: 3rem;
             background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            width: 80%;
+            max-width: 600px;
+            margin-top: 100px;
         }
         button {
-            padding: 10px 20px;
-            font-size: 1rem;
+            padding: 15px 30px;
+            font-size: 1.2rem;
             background-color: #007bff;
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             cursor: pointer;
-            margin: 10px;
+            margin: 15px;
+            transition: background-color 0.3s, transform 0.3s;
         }
         button:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+            /* background: linear-gradient(to right, #260762, #2f534b); */
+            color: #ffffff;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
+
+    <div class="header">
+        <!-- <img src="C:\Users\ameya\OneDrive\Desktop\Solar industries\Web\templates" alt="Solar Logo"> -->
+        <h1>SOLAR INDUSTRIES</h1>
+    </div>
+
+    <div class="subheader"><b>
+        Automated Customer Inquiry System
+        </b>
+    </div>
 
     <div class="container">
         <h1>Choose a page to redirect to</h1>
         <button onclick="window.location.href='/predict_banking'">Go to Banking Prediction</button>
         <button onclick="window.location.href='/predict_it'">Go to IT Support Prediction</button>
     </div>
+
+    <!-- <footer>
+        Project created by: Kartikey Admane, Jayesh Paliwal, Jayant Khause, Omdeep Sawarkar
+    </footer> -->
 
 </body>
 </html>

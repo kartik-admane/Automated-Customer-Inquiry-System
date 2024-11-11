@@ -9,18 +9,52 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #009C4B, #48C9B0); /* Gradient background */
             margin: 0;
+            flex-direction: column;
+        }
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #007bff;
+            z-index: 10;
+        }
+        .header img {
+            height: 50px; /* Adjusted logo height */
+            margin-right: 15px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            color: #d8050f; /* Solar Green */
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+            font-weight: bold;
+        }
+        .subheader {
+            font-size: 1.5rem;
+            color: #151313;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: normal;
         }
         .container {
             text-align: center;
-            background-color: #ffffff;
-            padding: 2rem;
+            background-color: white;
+            padding: 2.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 80%;
             max-width: 600px;
+            margin-top: 100px;
         }
         h1 {
             color: #333;
@@ -48,9 +82,11 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
         }
         button:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
         }
         .response {
             margin-top: 1.5rem;
@@ -58,9 +94,28 @@
             color: #444;
             text-align: left;  
         }
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+            color: #fff;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
+
+    <div class="header">
+        <!-- <img src="C:\path\to\your\logo.png" alt="Solar Logo"> -->
+        <h1>SOLAR INDUSTRIES</h1>
+    </div>
+
+    <div class="subheader">
+        <b>Automated IT Support Inquiry System</b>
+    </div>
+
     <div class="container">
         <h1>Enter Your Query for IT Support</h1>
         <form action="/predict_it" method="POST">
@@ -75,5 +130,10 @@
             </div>
         {% endif %}
     </div>
+
+    <!-- <footer>
+        Project created by: Kartikey Admane, Jayesh Paliwal, Jayant Khause, Omdeep Sawarkar
+    </footer> -->
+
 </body>
 </html>
