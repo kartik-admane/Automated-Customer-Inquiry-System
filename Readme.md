@@ -8,10 +8,6 @@ This project aims to develop an automated system for classifying customer suppor
 3. [Technologies Used](#technologies-used)
 4. [Project Structure](#project-structure)
 5. [Installation](#installation)
-6. [Usage](#usage)
-7. [Challenges and Improvements](#challenges-and-improvements)
-8. [Contributing](#contributing)
-9. [License](#license)
 
 ## Project Overview
 In customer support environments, managing high volumes of inquiries is crucial for maintaining a positive customer experience. This system leverages NLP techniques to analyze and classify support tickets into predefined categories, automatically routing them to appropriate teams. The system is designed to work in real-time, ensuring faster ticket processing and allowing support teams to focus on resolving issues efficiently.
